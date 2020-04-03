@@ -1,7 +1,9 @@
 from flask import Flask
-from subprocess import Popen, PIPE
+from app import blueprint
 
 app = Flask(__name__)
+app.register_blueprint(blueprint)
+app.app_context().push()
 
 @app.route('/')
 def index():
