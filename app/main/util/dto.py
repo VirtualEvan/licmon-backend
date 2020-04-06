@@ -1,8 +1,8 @@
 from flask_restx import Namespace, fields
 
 class LicenseDto:
-    api = Namespace('license', description='License operations')
-    license = api.model('license', {
+    api = Namespace('user', description='User operations')
+    license = api.model('user', {
         'username': fields.String(required=True, description='User account'),
         'hostname': fields.String(required=True, description='Host where user is running'),
         'display': fields.String(required=True, description='Display where user is running'),
