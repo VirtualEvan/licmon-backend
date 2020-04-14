@@ -1,15 +1,26 @@
-class Product:
-    """ Feature Model for storing feature related details """
+class User:
+    """ User Model for storing user related details """
 
-    def __init__(self, username, hostname, display, version, server, port, handle, checkout):
-            self.username = username
-            self.hostname = hostname
-            self.display = display
-            self.version = version
-            self.server = server
-            self.port = port
-            self.handle = handle
-            self.checkout = checkout
+    def __init__(self,
+        username,
+        hostname,
+        display,
+        version,
+        server,
+        port,
+        handle,
+        checkout,
+        num_licenses = None
+    ):
+        self.username = username
+        self.hostname = hostname
+        self.display = display
+        self.version = version
+        self.server = server
+        self.port = port
+        self.handle = handle
+        self.checkout = checkout
+        self.num_licenses = num_licenses
 
     @property
     def username(self):
@@ -74,6 +85,14 @@ class Product:
     @checkout.setter
     def checkout(self, checkout):
         self._checkout = checkout
+
+    @property
+    def num_licenses(self):
+        return self._num_licenses
+
+    @num_licenses.setter
+    def num_licenses(self, num_licenses):
+        self._num_licenses = num_licenses
 
     def __repr__(self):
         return f"<Product '{self.name}'>"

@@ -1,13 +1,22 @@
-class Product:
+class Feature:
     """ Feature Model for storing feature related details """
 
-    def __init__(self, name, version, vendor, licenses_issued, licenses_in_use, users):
-            self.name = name
-            self.version = version
-            self.vendor = vendor
-            self.licenses_issued = licenses_issued
-            self.licenses_in_use = licenses_in_use
-            self.users = []
+    # TODO:  Too many arguments
+    def __init__(self, 
+        name,
+        version = None,
+        vendor = None,
+        licenses_issued = None,
+        licenses_in_use = None,
+        message = None
+    ):
+        self.name = name
+        self.version = version
+        self.vendor = vendor
+        self.licenses_issued = licenses_issued
+        self.licenses_in_use = licenses_in_use
+        self.users = []
+        self.message = message
 
     @property
     def name(self):
@@ -56,6 +65,15 @@ class Product:
     @users.setter
     def users(self, users):
         self._users = users
+
+    # TODO: Put message as property? Mutually exclusive...
+    @property
+    def message(self):
+        return self._message
+
+    @message.setter
+    def message(self, message):
+        self._message = message
 
     def add_user(self, user):
         return self._users.append(user)
