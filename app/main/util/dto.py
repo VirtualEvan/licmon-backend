@@ -1,5 +1,6 @@
 from flask_restx import Namespace, fields
 
+
 # TODO: Check the names of the namespaces and models
 class ProductDto:
     api = Namespace('Product', description='Product operations')

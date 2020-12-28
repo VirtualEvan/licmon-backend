@@ -1,8 +1,11 @@
 import os
+
 from flask import Flask
+from flask_cors import CORS
+
 from app import blueprint
 from app.main import create_app
-from flask_cors import CORS
+
 
 app = create_app(os.getenv('BOILERPLATE_ENV') or 'dev')
 app.register_blueprint(blueprint)
