@@ -2,13 +2,14 @@ class Feature:
     """ Feature Model for storing feature related details """
 
     # TODO:  Too many arguments
-    def __init__(self, 
+    def __init__(
+        self,
         name,
-        version = None,
-        vendor = None,
-        licenses_issued = None,
-        licenses_in_use = None,
-        message = None
+        version=None,
+        vendor=None,
+        licenses_issued=None,
+        licenses_in_use=None,
+        message=None,
     ):
         self.name = name
         self.version = version
