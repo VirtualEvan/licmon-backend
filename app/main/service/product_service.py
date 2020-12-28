@@ -1,11 +1,12 @@
-import uuid
 import datetime
 import re
+import uuid
+from subprocess import PIPE, Popen
 
-from app.main.model.product import Product
 from app.main.model.feature import Feature
+from app.main.model.product import Product
 from app.main.model.user import User
-from subprocess import Popen, PIPE
+
 
 def get_product(product_name):
     command = f'sudo -u epuentes /eos/project-e/engtools/ITadmintools/licencequerytools/Flex/lmstat -a -c /afs/cern.ch/project/cad/doc/axcad/licstats/data/cvs/licenses_licmon/{product_name}/license.dat | cat -v'

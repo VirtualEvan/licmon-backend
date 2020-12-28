@@ -1,8 +1,9 @@
 from flask import request
 from flask_restx import Resource
 
-from ..util.dto import ProductDto
 from ..service.product_service import get_product
+from ..util.dto import ProductDto
+
 
 api = ProductDto.api
 _product = ProductDto.product

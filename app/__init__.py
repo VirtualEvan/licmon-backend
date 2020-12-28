@@ -1,9 +1,10 @@
 # app/__init__.py
 
-from flask_restx import Api
 from flask import Blueprint
+from flask_restx import Api
 
 from .main.controller.product_controller import api as product_ns
+
 
 blueprint = Blueprint('api', __name__)
 

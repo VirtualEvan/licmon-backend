@@ -1,0 +1,13 @@
+# List with the information specific to each product
+# Specify items as follows
+# It is recommended to use aliases when possible
+# {
+#     product_name = 'Product'
+#     port = xxxx
+#     license_servers = [
+#         'server1',
+#         'server2',
+#         'server3'
+#     ]
+# }
+SERVER_LIST = []
