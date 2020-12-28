@@ -1,7 +1,8 @@
 class User:
     """ User Model for storing user related details """
 
-    def __init__(self,
+    def __init__(
+        self,
         username,
         hostname,
         display,
@@ -10,7 +11,7 @@ class User:
         port,
         handle,
         checkout,
-        num_licenses = None
+        num_licenses=None,
     ):
         self.username = username
         self.hostname = hostname

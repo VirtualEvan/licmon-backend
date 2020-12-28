@@ -2,8 +2,8 @@ class Product:
     """ Prduct Model for storing product related details """
 
     def __init__(self, name):
-            self.name = name 
-            self.features = []
+        self.name = name
+        self.features = []
 
     @property
     def name(self):

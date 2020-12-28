@@ -13,6 +13,7 @@ app.app_context().push()
 # TODO: Is this the right way to manage CORS?
 CORS(app)
 
+
 @app.route('/')
 def index():
     product = 'comsol'
@@ -20,5 +21,6 @@ def index():
 
     stdout, stderr = Popen(command, shell=True, stdout=PIPE).communicate()
     return stdout
+
 
 app.run(port=5000)
