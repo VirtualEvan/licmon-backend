@@ -1,18 +1,18 @@
-from flask import request
-from flask_restx import Resource
+from flask import Blueprint
+from flask.views import MethodView
 
 from ..service.product_service import get_product
 from ..util.dto import ProductDto
 
 
-api = ProductDto.api
+api = Blueprint('api', __name__, url_prefix='/api')
 _product = ProductDto.product
 
-
-@api.route('/<product_name>')
+# TODO: Separate in different controllers and from api
+@api.route('/product/<product_name>')
 @api.param('product_name', 'The Product name')
 @api.response(404, 'Product not found.')
-class Product(Resource):
+class Product(MethodView):
     @api.doc('Get usage information about a product')
     @api.marshal_with(_product, skip_none=True)
     def get(self, product_name):
