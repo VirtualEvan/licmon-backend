@@ -60,6 +60,9 @@ EMAIL_USE_TLS = False
 EMAIL_USE_SSL = False
 EMAIL_TIMEOUT = 10
 
+# Specify the location of lmutil
+LMUTIL_PATH = 'lmutil'
+
 # All emails sent on behalf of users are sent from the noreply address. 
 NOREPLY_ADDRESS = 'noreply@example.com'
 

@@ -1,5 +1,8 @@
 from marshmallow import fields
-from .core.marshmallow import marshmallow
+
+from ..core.marshmallow import marshmallow
+from .license import LicenseSchema
+
 
 class FeatureSchema(marshmallow.Schema):
     name = fields.String(required=True, description='Feature name')
@@ -12,7 +15,7 @@ class FeatureSchema(marshmallow.Schema):
         required=False, description='Number of licenses in use'
     )
     users = fields.List(
-        fields.Nested(license, skip_none=True),
+        fields.Nested(LicenseSchema, skip_none=True),
         required=False,
         description='Users using a license',
     )
