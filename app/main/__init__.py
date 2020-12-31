@@ -4,16 +4,16 @@ from .config import config_by_name
 
 
 def _load_configuration(app, from_env=True):
-    app.config.from_pyfile('licmon.cfg.default')
+    app.config.from_pyfile('licmon.cfg.example')
     if from_env:
-        app.config.from_pyfile('LICMON_CONFIG')
+        app.config.from_envvar('LICMON_CONFIG')
 
 
 def _load_license_servers(app, from_env=True):
     # TODO: Modify to get sample data from config ?
-    app.config.from_pyfile('servers.cfg.default')
+    app.config.from_pyfile('servers.cfg.example')
     if from_env:
-        app.config.from_pyfile('SERVERS_CONFIG')
+        app.config.from_envvar('SERVERS_CONFIG')
 
 
 # def create_app(config_name):

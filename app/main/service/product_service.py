@@ -3,27 +3,34 @@ import re
 import uuid
 from subprocess import PIPE, Popen
 
+from flask import current_app
+
 from app.main.model.feature import Feature
 from app.main.model.product import Product
 from app.main.model.user import User
 
 
-def get_product(product_name):
-    command = f'sudo -u epuentes /eos/project-e/engtools/ITadmintools/licencequerytools/Flex/lmstat -a -c /afs/cern.ch/project/cad/doc/axcad/licstats/data/cvs/licenses_licmon/{product_name}/license.dat | cat -v'
-
-    testcommand = 'cat test.txt'
-
-    # TODO: set the production command
+# TODO: Sanitize input
+def lmstat_all(port, license_servers):
+    command = f'{current_app.config["LMUTIL_PATH"]} lmstat -c {port}@{",".join(license_servers)} -a'
     stdout, stderr = Popen(command, shell=True, stdout=PIPE).communicate()
 
-    if stderr is not None:
-        return stderr
-    else:
-        return parse_product(stdout)
+    return stdout, stderr
 
 
-def parse_product(stdout):
-    product = Product("Comsol")
+def get_product_info(product_name):
+    if (server := current_app.config['SERVER_LIST'].get(product_name)) is None:
+        return None
+
+    # TODO: Handle stderr
+    # TODO: port and license_servers should be defined
+    stdout, stderr = lmstat_all(**server)
+
+    return parse_product(product_name, stdout)
+
+
+def parse_product(product_name, stdout):
+    product = Product(product_name)
     current_feature = None
 
     # Users of PERMANENT:  (Uncounted, node-locked)
@@ -51,6 +58,12 @@ def parse_product(stdout):
     regex_error_down = re.compile(
         'lmgrd is not running: License server machine is down or not responding.'
     )
+
+    # TODO: Handle this error
+    # Error getting status: Cannot connect to license server system. (-15,570:36 "Operation now in progress")
+    # regex_error_connection = re.compile(
+    #     'Error getting status: Cannot connect to license server system. (-15,570:36 "Operation now in progress")'
+    # )
 
     for line in str(stdout).split(r'\n'):
 
@@ -116,6 +129,11 @@ def parse_product(stdout):
         elif regex_error_down.search(line):
             matches = regex_error_down.search(line)
             return
+
+        # TODO: Handle this error
+        # elif regex_error_connection.search(line):
+        #     matches = regex_error_connection.search(line)
+        #     return
 
     # Add the last feature
     if current_feature is not None:
