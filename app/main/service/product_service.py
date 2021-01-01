@@ -6,24 +6,26 @@ from subprocess import PIPE, Popen
 from flask import current_app
 
 from app.main.model.feature import Feature
+from app.main.model.license import License
 from app.main.model.product import Product
-from app.main.model.user import User
 
 
 # TODO: Sanitize input
-def lmstat_all(port, license_servers):
-    command = f'{current_app.config["LMUTIL_PATH"]} lmstat -c {port}@{",".join(license_servers)} -a'
+def lmstat_all(port, hostnames):
+    command = (
+        f'{current_app.config["LMUTIL_PATH"]} lmstat -c {port}@{",".join(hostnames)} -a'
+    )
     stdout, stderr = Popen(command, shell=True, stdout=PIPE).communicate()
 
     return stdout, stderr
 
 
 def get_product_info(product_name):
-    if (server := current_app.config['SERVER_LIST'].get(product_name)) is None:
+    if (server := current_app.config['LICENSE_SERVERS'].get(product_name)) is None:
         return None
 
     # TODO: Handle stderr
-    # TODO: port and license_servers should be defined
+    # TODO: port and hostnames should be defined
     stdout, stderr = lmstat_all(**server)
 
     return parse_product(product_name, stdout)
@@ -45,7 +47,7 @@ def parse_product(product_name, stdout):
     regex_feature_details = re.compile('\"(.*)\" v(\d+\.\d+), vendor: (.*)')
 
     # opsepu vmapp002 EVAN-PC (v1.0) (lxlicen14a/27005 24757), start Wed 4/8 10:55, 212 licenses
-    regex_user = re.compile(
+    regex_license = re.compile(
         '(\w+) (.*) (.*) (?:\(v(.*)\))? \((.*)\/(\d+) (\d+)\), start (\w+ \d+\/\d+ \d+\:\d+)(?:, (\d+) licenses)?'
     )
 
@@ -96,9 +98,9 @@ def parse_product(product_name, stdout):
         #     current_feature.version = matches.group(2)
         #     current_feature.vendor = matches.group(3)
 
-        elif regex_user.search(line):
-            matches = regex_user.search(line)
-            user = User(
+        elif regex_license.search(line):
+            matches = regex_license.search(line)
+            license = License(
                 username=matches.group(1),
                 hostname=matches.group(2),
                 display=matches.group(3),
@@ -109,7 +111,7 @@ def parse_product(product_name, stdout):
                 checkout=matches.group(8),
                 num_licenses=matches.group(9),
             )
-            current_feature.add_user(user)
+            current_feature.add_license(license)
 
         elif regex_error_unsupported.search(line):
             matches = regex_error_unsupported.search(line)

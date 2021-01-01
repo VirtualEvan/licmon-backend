@@ -1,5 +1,5 @@
 class Feature:
-    """ Feature Model for storing feature related details """
+    """ Feature Model storing feature related details """
 
     # TODO:  Too many arguments
     def __init__(
@@ -16,7 +16,7 @@ class Feature:
         self.vendor = vendor
         self.licenses_issued = licenses_issued
         self.licenses_in_use = licenses_in_use
-        self.users = []
+        self.licenses = []
         self.message = message
 
     @property
@@ -60,12 +60,12 @@ class Feature:
         self._licenses_in_use = licenses_in_use
 
     @property
-    def users(self):
-        return self._users
+    def licenses(self):
+        return self._licenses
 
-    @users.setter
-    def users(self, users):
-        self._users = users
+    @licenses.setter
+    def licenses(self, licenses):
+        self._licenses = licenses
 
     # TODO: Put message as property? Mutually exclusive...
     @property
@@ -76,8 +76,8 @@ class Feature:
     def message(self, message):
         self._message = message
 
-    def add_user(self, user):
-        return self._users.append(user)
+    def add_license(self, license):
+        return self._licenses.append(license)
 
     def __repr__(self):
         return f"<Product '{self.name}'>"

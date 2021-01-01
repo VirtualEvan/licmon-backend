@@ -1,5 +1,5 @@
-class User:
-    """ User Model for storing user related details """
+class License:
+    """ License Model storing details of users holding licenses """
 
     def __init__(
         self,

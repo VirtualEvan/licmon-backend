@@ -3,7 +3,9 @@ from webargs import flaskparser
 
 # from flask.views import MethodView
 from ..schemas.product import ProductSchema
+from ..schemas.server import ServerSchema
 from ..service.product_service import get_product_info
+from ..service.server import get_servers_info
 
 
 api = Blueprint('api', __name__, url_prefix='/api')
@@ -25,12 +27,17 @@ def get_product(product_name):
         return ProductSchema().jsonify(product)
 
 
-@api.route('/products')
+@api.route('/servers')
 # @api.param('product_name', 'The Product name')
 # @api.response(404, 'Product not found.')
 # class Products(MethodView):
 # @api.doc('Get usage information about a product')
 # @api.marshal_with(_product, skip_none=True)
-def get_products():
+def get_servers():
     """Get the lists of products configured"""
-    return jsonify(current_app.config['SERVER_LIST'])
+    # TODO: Get directly from config??
+    # Right now the name of the server is comming inside the objectm rather than as a key
+    servers = get_servers_info()
+    return ServerSchema(many=True).jsonify(servers)
+
+    
