@@ -7,9 +7,9 @@ from .feature import FeatureSchema
 # TODO: Remove fields which are returning null
 # TODO: Check the names of the namespaces and models
 class ProductSchema(marshmallow.Schema):
-    name = fields.String(required=True, description='Product name')
+    name = fields.String(required=True, description="Product name")
     features = fields.List(
         fields.Nested(FeatureSchema, skip_none=True),
         required=False,
-        description='Product features',
+        description="Product features",
     )

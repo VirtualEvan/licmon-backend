@@ -1,5 +1,5 @@
 class Product:
-    """ Prduct Model for storing product related details """
+    """ Product Model storing product related details """
 
     def __init__(self, name):
         self.name = name
