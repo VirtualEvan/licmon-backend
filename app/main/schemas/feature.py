@@ -14,7 +14,7 @@ class FeatureSchema(marshmallow.Schema):
     licenses_in_use = fields.Integer(
         required=False, description="Number of licenses in use"
     )
-    users = fields.List(
+    licenses = fields.List(
         fields.Nested(LicenseSchema, skip_none=True),
         required=False,
         description="Users using a license",

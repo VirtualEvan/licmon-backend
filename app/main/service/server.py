@@ -2,6 +2,7 @@ from flask import current_app
 
 from app.main.model.server import Server
 
+
 def get_servers_info():
     servers = [
         Server(key, **value)
