@@ -39,5 +39,3 @@ def get_servers():
     # Right now the name of the server is comming inside the objectm rather than as a key
     servers = get_servers_info()
     return ServerSchema(many=True).jsonify(servers)
-
-    
