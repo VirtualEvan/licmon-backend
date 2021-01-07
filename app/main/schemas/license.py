@@ -16,8 +16,8 @@ class LicenseSchema(marshmallow.Schema):
     )
     handle = fields.String(required=True, description="License handle")
     checkout = fields.String(
-        required=True, description="Time that this license was checked out"
+        required=True, description="Time when this license was checked out"
     )
-    num_licenses = fields.String(
-        required=False, description="Number of licenses the user has"
+    num_licenses = fields.Integer(
+        required=False, description="Number of licenses assigned to the user"
     )
