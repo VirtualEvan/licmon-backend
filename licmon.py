@@ -12,4 +12,10 @@ app = create_app(os.getenv('BOILERPLATE_ENV') or 'dev')
 # TODO: Is this the right way to manage CORS?
 CORS(app)
 
+# TODO: Remove this...
+@app.route('/favicon.ico')
+def favicon():
+    return '', 200
+
+
 app.run(port=5000, debug=True)
