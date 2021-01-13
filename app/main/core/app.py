@@ -20,7 +20,9 @@ def _configure_license_servers(app, from_env=True):
 
 
 def _configure_auth(app):
-    oauth.register('licmonqa', **app.config['OAUTH'])
+    # TODO: Usar super para hacer client = register(...)   ???
+    # Probar cómo se ven en el objeto los atributos de configuración con nombre LICMON_CLIENT_ID, LICMON_CLIENT_SECRET, etc.
+    oauth.register(app.name, **app.config['OAUTH'])
     oauth.init_app(app)
 
 
