@@ -7,6 +7,7 @@ from flask import (
     request,
     session,
     url_for,
+    render_template
 )
 from itsdangerous import BadData, SignatureExpired
 from werkzeug.urls import url_encode
@@ -24,6 +25,9 @@ from app.main.schemas.user import UserSchema
 
 auth = Blueprint('auth', __name__)
 
+# TODO: Error handler to avoid CORS when error 500
+# https://stackoverflow.com/questions/29825235/getting-cors-headers-in-a-flask-500-error
+# https://github.com/corydolphin/flask-cors/issues/67
 
 @auth.before_app_request
 def require_token():
@@ -31,7 +35,8 @@ def require_token():
     token = auth[7:] if auth and auth.startswith('Bearer ') else None
     if not token:
         function = current_app.view_functions[request.endpoint]
-        if getattr(function, '_allow_anonymous', False):
+        # TODO: Check for the method somewhere else
+        if getattr(function, '_allow_anonymous', False) or request.method == 'OPTIONS':
             return
         return jsonify(error='token_missing'), 401
     try:
@@ -44,7 +49,6 @@ def require_token():
 
 
 @auth.route('/user')
-@allow_anonymous
 def user():
     return UserSchema().jsonify(g.user)
 
@@ -65,11 +69,10 @@ def authorize():
     user = oauth.client.parse_id_token(token)
     app_user = map_user_fields(user)
     session['user'] = app_user
-    return token_from_user(app_user)
+    return render_template('login_response.html', payload={'error': None, 'token': token_from_user(app_user)})
 
 
 @auth.route('/logout')
-# TODO: Should be allowed only for logged in sessinos
 @allow_anonymous
 def logout():
     session.clear()

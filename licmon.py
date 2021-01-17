@@ -10,7 +10,7 @@ from app.main.core.app import create_app
 
 app = create_app(os.getenv('BOILERPLATE_ENV') or 'dev')
 # TODO: Is this the right way to manage CORS?
-CORS(app)
+CORS(app, supports_credentials=True)
 
 # TODO: Remove this...
 @app.route('/favicon.ico')
