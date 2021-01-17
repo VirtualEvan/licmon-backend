@@ -34,7 +34,7 @@ def dummy_token():
             'email': 'example@example.com',
             'name': 'Dummy User',
             'roles': ['default-role', 'licmon-admins'],
-            'uid': '-',
+            'uid': 0,
         },
         salt='app-token',
     )
