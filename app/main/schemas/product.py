@@ -8,6 +8,7 @@ from .feature import FeatureSchema
 # TODO: Check the names of the namespaces and models
 class ProductSchema(marshmallow.Schema):
     name = fields.String(required=True, description="Product name")
+    raw = fields.String(required=True, description="Raw command output")
     features = fields.List(
         fields.Nested(FeatureSchema, skip_none=True),
         required=False,

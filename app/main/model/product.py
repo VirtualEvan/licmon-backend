@@ -24,5 +24,13 @@ class Product:
     def add_feature(self, feature):
         return self._features.append(feature)
 
+    @property
+    def raw(self):
+        return self._raw
+
+    @raw.setter
+    def raw(self, raw):
+        self._raw = raw
+
     def __repr__(self):
         return f"<Product '{self.name}'>"

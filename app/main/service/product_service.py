@@ -33,6 +33,7 @@ def get_product_info(product_name):
 
 def parse_product(product_name, stdout):
     product = Product(product_name)
+    product.raw = stdout
     current_feature = None
 
     # Users of PERMANENT:  (Uncounted, node-locked)
