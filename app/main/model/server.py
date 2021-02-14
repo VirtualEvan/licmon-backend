@@ -29,3 +29,6 @@ class Server:
     @hostnames.setter
     def hostnames(self, hostnames):
         self._hostnames = hostnames
+
+    def __repr__(self):
+        return f"<Server '{self.name}:{self.port}'>"
