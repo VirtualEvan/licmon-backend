@@ -1,0 +1,11 @@
+{% extends 'base_email.txt' %}
+{% block content -%}
+    This mail concerns the {{ product }} feature "{{ feature }}".
+    One of your colleagues wishes to use this tool but currently all licences are taken.
+    You are reported as using a licence. If you no longer need to use this feature then please close any programs that would free a licence.
+
+    If you are unaware that you are blocking this feature, or have any other questions regarding its use, please forward this mail to service.desk@cern.ch
+
+    Regards,
+    IT-CDA support
+{%- endblock %}

@@ -96,4 +96,4 @@ class License:
         self._num_licenses = num_licenses
 
     def __repr__(self):
-        return f"<Product '{self.name}'>"
+        return f"<License '{self.name}'>"

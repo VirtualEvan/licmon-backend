@@ -80,4 +80,4 @@ class Feature:
         return self._licenses.append(license)
 
     def __repr__(self):
-        return f"<Product '{self.name}'>"
+        return f"<Feature '{self.name}'>"

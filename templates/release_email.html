@@ -1,0 +1,21 @@
+{% extends 'base_email.html' %}
+
+{% block content %}
+  <p>
+    This mail concerns the <b>{{ product }}</b> feature "<b>{{ feature }}</b>".
+    One of your colleagues wishes to use this tool but currently all licences are taken.
+  </p>
+
+  <p>
+    You are reported as using a licence. If you no longer need to use this feature then please close any programs that would free a licence.
+  </p>
+
+  <p>
+    If you are unaware that you are blocking this feature, or have any other questions regarding its use, please forward this mail to <a href="mailto:service.desk@cern.ch">service.desk@cern.ch</a>
+  </p>
+
+  <p>
+    Regards,
+    IT-CDA Support
+  </p>
+{% endblock %}
