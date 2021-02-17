@@ -4,7 +4,7 @@ from webargs import flaskparser
 # from flask.views import MethodView
 from ..schemas.product import ProductSchema
 from ..schemas.server import ServerSchema
-from ..service.product_service import get_product_info
+from ..service.product import get_product_info
 from ..service.server import get_servers_info
 
 from app.main.core.notifications import send_email
@@ -43,7 +43,7 @@ def get_servers():
     return ServerSchema(many=True).jsonify(servers)
 
 # TODO: Move this to a features controller
-@api.route('/request-release/<product_name>/<feature_name>')
+@api.route('/request-release/<product_name>/<feature_name>', methods=('POST',))
 @allow_anonymous
 def request_release(product_name, feature_name):
     # TODO: get feature instead of the whole product
@@ -53,9 +53,8 @@ def request_release(product_name, feature_name):
         flaskparser.abort(404)
 
     # TODO: Do this in a nicer way, using a feature shoud improve the solution
-    # However, the domain should not be hardcoded
+    # TODO: The domain should not be hardcoded
     feature =  next((f for f in product.features if f.name == feature_name), None)
-    # TODO: Emails might be repeated
     user_emails = set(map(
         lambda l: f'{l.username}@cern.ch',
         feature.licenses
@@ -64,6 +63,10 @@ def request_release(product_name, feature_name):
         f'PLEASE NOTE! - All {product_name} licences for {feature_name} taken!',
         'release_email.txt',
         'release_email.html',
+        {
+            'product': product_name,
+            'feature': feature_name,
+        },
         user_emails
     )
-    return "sent"
+    return '', 204

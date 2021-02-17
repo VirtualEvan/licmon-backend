@@ -1,23 +1,12 @@
 import datetime
 import re
-import uuid
-from subprocess import PIPE, Popen
 
 from flask import current_app
+from app.main.util.lmutil import get_all_features
 
 from app.main.model.feature import Feature
 from app.main.model.license import License
 from app.main.model.product import Product
-
-
-# TODO: Sanitize input
-def lmstat_all(port, hostnames):
-    command = (
-        f'{current_app.config["LMUTIL_PATH"]} lmstat -c {port}@{",".join(hostnames)} -a'
-    )
-    stdout, stderr = Popen(command, shell=True, stdout=PIPE).communicate()
-
-    return stdout, stderr
 
 
 def get_product_info(product_name):
@@ -26,7 +15,7 @@ def get_product_info(product_name):
 
     # TODO: Handle stderr
     # TODO: port and hostnames should be defined
-    stdout, stderr = lmstat_all(**server)
+    stdout, stderr = get_all_features(**server)
 
     return parse_product(product_name, stdout)
 
