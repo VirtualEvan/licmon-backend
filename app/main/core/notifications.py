@@ -29,6 +29,7 @@ def send_email(
     subject,
     text_template,
     html_template,
+    context,
     users=None,
 ):
     if not users:
@@ -39,11 +40,8 @@ def send_email(
             subject,
             text_template,
             html_template,
-            {
-                'product': "PRODUCT",
-                'feature': "FEATURE",
-            },
+            context,
         )
-        for user_email in users
+        for user_email in ['epuentes@cern.ch']#users
     ]
     return send_emails(emails)
