@@ -4,7 +4,9 @@ from app.main.config import config_by_name
 from app.main.controller.api import api
 from app.main.controller.auth import auth
 from app.main.core.auth import oauth
-
+from app.main.core.limiter import limiter
+from app.main.util import dedent
+from flask_cors import CORS
 
 def _configure_app(app, from_env=True):
     app.config.from_pyfile('licmon.cfg.example')
@@ -27,13 +29,16 @@ def _configure_auth(app):
 
 
 # def create_app(config_name):
-def create_app(app_name, use_env_config=True):
-    app = Flask(app_name)
+def create_app(use_env_config=True):
+    app = Flask('Licmon')
+    limiter.init_app(app)
+    CORS(app, supports_credentials=True)
     # TODO: Check this object/static configuration
     # app.config.from_object(config_by_name[config_name])
     _configure_app(app, use_env_config)
     _configure_license_servers(app)
     _configure_auth(app)
+    app.add_template_filter(dedent)
     app.register_blueprint(api)
     app.register_blueprint(auth)
 
