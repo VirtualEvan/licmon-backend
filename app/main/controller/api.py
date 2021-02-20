@@ -1,4 +1,4 @@
-from flask import Blueprint, current_app, jsonify
+from flask import Blueprint, current_app, jsonify, request
 from webargs import flaskparser
 
 # from flask.views import MethodView
@@ -7,10 +7,17 @@ from ..schemas.server import ServerSchema
 from ..service.product import get_product_info
 from ..service.server import get_servers_info
 
+from werkzeug.exceptions import TooManyRequests
 from app.main.core.notifications import send_email
 from app.main.core.auth import allow_anonymous
+from app.main.core.limiter import limiter
 
 api = Blueprint('api', __name__, url_prefix='/api')
+
+@api.errorhandler(TooManyRequests)
+def _ratelimit_handler(e):
+    return jsonify(error=f'ratelimit exceeded {e.description}'), 429
+
 
 # TODO: Separate in different controllers and from api
 @api.route('/product/<product_name>')
@@ -43,8 +50,17 @@ def get_servers():
     return ServerSchema(many=True).jsonify(servers)
 
 # TODO: Move this to a features controller
+# TODO: All restrictions could be ignored by admins
+# A function checking if this option is enabled and if the user is admin
+# could be added as a `exempt_when=lambda: current_user.is_admin`
 @api.route('/request-release/<product_name>/<feature_name>', methods=('POST',))
+# TODO: Should be restricted to logged in users
 @allow_anonymous
+# TODO: This doesn't seem like an elegant solution
+@limiter.limit(
+    lambda: current_app.config['EMAIL_COOLDOWN'],
+    lambda: f"{request.view_args.get('product_name')}.{request.view_args.get('feature_name')}"
+)
 def request_release(product_name, feature_name):
     # TODO: get feature instead of the whole product
     product = get_product_info(product_name)
