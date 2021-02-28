@@ -41,5 +41,6 @@ def create_app(use_env_config=True):
     app.add_template_filter(dedent)
     app.register_blueprint(api)
     app.register_blueprint(auth)
+    app.add_url_rule('/', 'index', build_only=True)
 
     return app
