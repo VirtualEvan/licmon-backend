@@ -2,11 +2,11 @@ import datetime
 import re
 
 from flask import current_app
-from app.main.util.lmutil import get_all_features
 
 from app.main.model.feature import Feature
 from app.main.model.license import License
 from app.main.model.product import Product
+from app.main.util.lmutil import get_all_features
 
 
 def get_product_info(product_name):

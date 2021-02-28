@@ -1,13 +1,16 @@
 import uuid
-from flask import current_app
 from subprocess import PIPE, Popen
+
+from flask import current_app
 
 
 def get_all_features(port, hostnames):
     return lmstat(f'-c {port}@{",".join(hostnames)} -a')
 
+
 def get_feature(port, hostnames, feature_name):
     return lmstat(f'-c {port}@{",".join(hostnames)} -f {feature_name}')
+
 
 # TODO: Sanitize input
 def lmstat(parameters):

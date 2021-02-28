@@ -1,5 +1,10 @@
 from flask import Blueprint, current_app, jsonify, request
 from webargs import flaskparser
+from werkzeug.exceptions import TooManyRequests
+
+from app.main.core.auth import allow_anonymous
+from app.main.core.limiter import limiter
+from app.main.core.notifications import send_email
 
 # from flask.views import MethodView
 from ..schemas.product import ProductSchema
@@ -7,12 +12,9 @@ from ..schemas.server import ServerSchema
 from ..service.product import get_product_info
 from ..service.server import get_servers_info
 
-from werkzeug.exceptions import TooManyRequests
-from app.main.core.notifications import send_email
-from app.main.core.auth import allow_anonymous
-from app.main.core.limiter import limiter
 
 api = Blueprint('api', __name__, url_prefix='/api')
+
 
 @api.errorhandler(TooManyRequests)
 def _ratelimit_handler(e):
@@ -49,6 +51,7 @@ def get_servers():
     servers = get_servers_info()
     return ServerSchema(many=True).jsonify(servers)
 
+
 # TODO: Move this to a features controller
 # TODO: All restrictions could be ignored by admins
 # A function checking if this option is enabled and if the user is admin
@@ -59,7 +62,7 @@ def get_servers():
 # TODO: This doesn't seem like an elegant solution
 @limiter.limit(
     lambda: current_app.config['EMAIL_COOLDOWN'],
-    lambda: f"{request.view_args.get('product_name')}.{request.view_args.get('feature_name')}"
+    lambda: f"{request.view_args.get('product_name')}.{request.view_args.get('feature_name')}",
 )
 def request_release(product_name, feature_name):
     # TODO: get feature instead of the whole product
@@ -70,11 +73,8 @@ def request_release(product_name, feature_name):
 
     # TODO: Do this in a nicer way, using a feature shoud improve the solution
     # TODO: The domain should not be hardcoded
-    feature =  next((f for f in product.features if f.name == feature_name), None)
-    user_emails = set(map(
-        lambda l: f'{l.username}@cern.ch',
-        feature.licenses
-    ))
+    feature = next((f for f in product.features if f.name == feature_name), None)
+    user_emails = set(map(lambda l: f'{l.username}@cern.ch', feature.licenses))
     send_email(
         f'PLEASE NOTE! - All {product_name} licences for {feature_name} taken!',
         'release_email.txt',
@@ -83,6 +83,6 @@ def request_release(product_name, feature_name):
             'product': product_name,
             'feature': feature_name,
         },
-        user_emails
+        user_emails,
     )
     return '', 204

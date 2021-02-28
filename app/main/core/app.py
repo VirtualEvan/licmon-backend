@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 
 from app.main.config import config_by_name
 from app.main.controller.api import api
@@ -6,7 +7,7 @@ from app.main.controller.auth import auth
 from app.main.core.auth import oauth
 from app.main.core.limiter import limiter
 from app.main.util import dedent
-from flask_cors import CORS
+
 
 def _configure_app(app, from_env=True):
     app.config.from_pyfile('licmon.cfg.example')
@@ -28,7 +29,6 @@ def _configure_auth(app):
     oauth.init_app(app)
 
 
-# def create_app(config_name):
 def create_app(use_env_config=True):
     app = Flask('Licmon')
     limiter.init_app(app)
