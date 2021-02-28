@@ -1,5 +1,7 @@
 from flask import current_app
+
 from app.main.util.lmutil import lmstat_all
+
 
 # TODO: Ths is not being used
 # This should be used to handle single feature requests
@@ -9,12 +11,10 @@ def get_feature_info(product_name, feature_name):
 
     # TODO: Handle stderr
     # TODO: port and hostnames should be defined
-    stdout, stderr = get_feature(
-        **server,
-        feature_name=feature_name
-    )
+    stdout, stderr = get_feature(**server, feature_name=feature_name)
 
     return parse_feature(product_name, stdout)
+
 
 # TODO: Parse features separately
 # Right now all the parsing is being made in the product service
