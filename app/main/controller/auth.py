@@ -4,10 +4,10 @@ from flask import (
     g,
     jsonify,
     redirect,
+    render_template,
     request,
     session,
     url_for,
-    render_template
 )
 from itsdangerous import BadData, SignatureExpired
 from werkzeug.urls import url_encode
@@ -23,11 +23,12 @@ from app.main.core.auth import (
 from app.main.schemas.user import UserSchema
 
 
-auth = Blueprint('auth', __name__)
+auth = Blueprint('auth', __name__, url_prefix='/auth')
 
 # TODO: Error handler to avoid CORS when error 500
 # https://stackoverflow.com/questions/29825235/getting-cors-headers-in-a-flask-500-error
 # https://github.com/corydolphin/flask-cors/issues/67
+
 
 @auth.before_app_request
 def require_token():
@@ -57,7 +58,10 @@ def user():
 @allow_anonymous
 def login():
     if current_app.config['SKIP_LOGIN']:
-        return {'error': None, 'token': dummy_token()}
+        payload = {'error': None, 'token': dummy_token()}
+        return render_template('login_response.html', payload=payload)
+        # TODO: To be used when changing the login procedure
+        # return {'error': None, 'token': dummy_token()}
     redirect_uri = url_for('auth.authorize', _external=True)
     return oauth.client.authorize_redirect(redirect_uri)
 
@@ -69,7 +73,10 @@ def authorize():
     user = oauth.client.parse_id_token(token)
     app_user = map_user_fields(user)
     session['user'] = app_user
-    return render_template('login_response.html', payload={'error': None, 'token': token_from_user(app_user)})
+    return render_template(
+        'login_response.html',
+        payload={'error': None, 'token': token_from_user(app_user)},
+    )
 
 
 @auth.route('/logout')
@@ -77,7 +84,5 @@ def authorize():
 def logout():
     session.clear()
     logout_uri = oauth.client.load_server_metadata().get('end_session_endpoint')
-    query = url_encode(
-        {'post_logout_redirect_uri': url_for('auth.login', _external=True)}
-    )
+    query = url_encode({'post_logout_redirect_uri': url_for('index', _external=True)})
     return redirect(f'{logout_uri}?{query}')
