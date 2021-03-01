@@ -1,5 +1,4 @@
 from flask import Flask
-from flask_cors import CORS
 
 from app.main.config import config_by_name
 from app.main.controller.api import api
@@ -23,8 +22,6 @@ def _configure_license_servers(app, from_env=True):
 
 
 def _configure_auth(app):
-    # TODO: Usar super para hacer client = register(...)   ???
-    # Probar cómo se ven en el objeto los atributos de configuración con nombre LICMON_CLIENT_ID, LICMON_CLIENT_SECRET, etc.
     oauth.register(app.name, **app.config['OAUTH'])
     oauth.init_app(app)
 
@@ -32,7 +29,6 @@ def _configure_auth(app):
 def create_app(use_env_config=True):
     app = Flask('Licmon')
     limiter.init_app(app)
-    CORS(app, supports_credentials=True)
     # TODO: Check this object/static configuration
     # app.config.from_object(config_by_name[config_name])
     _configure_app(app, use_env_config)
