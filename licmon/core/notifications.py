@@ -1,7 +1,7 @@
 from flask import current_app, render_template, url_for
 
-from app.main.vendor.django_mail import get_connection
-from app.main.vendor.django_mail.message import EmailMultiAlternatives
+from licmon.vendor.django_mail import get_connection
+from licmon.vendor.django_mail.message import EmailMultiAlternatives
 
 
 def create_email(recipient_email, subject, text_template, html_template, context):

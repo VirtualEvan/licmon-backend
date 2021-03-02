@@ -9,7 +9,7 @@
 Backend for test environment.
 """
 
-from app.main.vendor import django_mail
+from licmon.vendor import django_mail
 
 from .base import BaseEmailBackend
 
