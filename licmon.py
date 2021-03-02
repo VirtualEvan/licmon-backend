@@ -5,7 +5,7 @@ from flask import Flask, redirect, session, url_for
 from flask_cors import CORS
 from werkzeug.urls import url_encode
 
-from app.main.core.app import create_app
+from licmon.core.app import create_app
 
 
 app = create_app(os.getenv('BOILERPLATE_ENV') or 'dev')

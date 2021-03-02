@@ -1,11 +1,11 @@
 from flask import Flask
 
-from app.main.config import config_by_name
-from app.main.controller.api import api
-from app.main.controller.auth import auth
-from app.main.core.auth import oauth
-from app.main.core.limiter import limiter
-from app.main.util import dedent
+from licmon.config import config_by_name
+from licmon.controller.api import api
+from licmon.controller.auth import auth
+from licmon.core.auth import oauth
+from licmon.core.limiter import limiter
+from licmon.util import dedent
 
 
 def _configure_app(app, from_env=True):

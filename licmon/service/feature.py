@@ -1,6 +1,6 @@
 from flask import current_app
 
-from app.main.util.lmutil import lmstat_all
+from licmon.util.lmutil import lmstat_all
 
 
 # TODO: Ths is not being used

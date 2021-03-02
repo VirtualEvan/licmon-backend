@@ -1,6 +1,6 @@
 from flask import current_app
 
-from app.main.model.server import Server
+from licmon.model.server import Server
 
 
 def get_servers_info():

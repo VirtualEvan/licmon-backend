@@ -2,9 +2,9 @@ from flask import Blueprint, current_app, jsonify, request
 from webargs import flaskparser
 from werkzeug.exceptions import TooManyRequests
 
-from app.main.core.auth import allow_anonymous
-from app.main.core.limiter import limiter
-from app.main.core.notifications import send_email
+from licmon.core.auth import allow_anonymous
+from licmon.core.limiter import limiter
+from licmon.core.notifications import send_email
 
 # from flask.views import MethodView
 from ..schemas.product import ProductSchema

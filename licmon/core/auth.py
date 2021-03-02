@@ -1,7 +1,7 @@
 from authlib.integrations.flask_client import OAuth
 from flask import current_app
 
-from app.main.util import secure_timed_serializer
+from licmon.util import secure_timed_serializer
 
 
 class _LicmonOAuth(OAuth):

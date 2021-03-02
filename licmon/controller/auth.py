@@ -12,7 +12,7 @@ from flask import (
 from itsdangerous import BadData, SignatureExpired
 from werkzeug.urls import url_encode
 
-from app.main.core.auth import (
+from licmon.core.auth import (
     allow_anonymous,
     dummy_token,
     map_user_fields,
@@ -20,7 +20,7 @@ from app.main.core.auth import (
     token_from_user,
     user_from_token,
 )
-from app.main.schemas.user import UserSchema
+from licmon.schemas.user import UserSchema
 
 
 auth = Blueprint('auth', __name__, url_prefix='/auth')
