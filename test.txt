@@ -1,0 +1,369 @@
+lmutil - Copyright (c) 1989-2005 Macrovision Europe Ltd. and/or Macrovision Corporation. All Rights Reserved.
+Flexible License Manager status on Thu 4/9/2020 10:31
+
+License server status: 1718@lxlicen18a
+    License file(s) on lxlicen18a: /opt/flexadm/folders/comsol/license.dat:
+
+lxlicen18a: license server UP (MASTER) v11.15
+
+Vendor daemon status (on lxlicen18a):
+
+  LMCOMSOL: UP v11.16
+
+Feature usage info:
+
+Users of PERMANENT:  (Uncounted, node-locked)
+
+Users of SERIAL:  (Uncounted, node-locked)
+
+  "SERIAL" v5.5, vendor: LMCOMSOL
+  uncounted nodelocked license locked to NOTHING (hostid=ANY)
+
+    Bernardo macte25212 macte25212.home (v5.4) (lxlicen18a/1718 20613), start Thu 4/9 10:11
+    abaskys pcte25484 algirdass-macbo (v5.5) (lxlicen18a/1718 7037), start Thu 4/9 10:23
+    abaskys pcte25484 algirdass-macbo (v5.5) (lxlicen18a/1718 14622), start Thu 4/9 10:23
+    abaskys pcte25484 algirdass-macbo (v5.5) (lxlicen18a/1718 10627), start Thu 4/9 10:24
+
+  "SERIAL" v5.5, vendor: LMCOMSOL
+  uncounted nodelocked license locked to NOTHING (hostid=ANY)
+
+    adpowell ALPHACELESTE adams-macbook-a (v5.21) (lxlicen18a/1718 11810), start Sat 4/4 14:52
+
+  "SERIAL" v5.5, vendor: LMCOMSOL
+  uncounted nodelocked license locked to NOTHING (hostid=ANY)
+
+    avaarant batch48vm04.cern.ch /dev/tty (v5.5) (lxlicen18a/1718 12225), start Wed 4/8 10:46
+    avaarant batch48vm03.cern.ch /dev/tty (v5.5) (lxlicen18a/1718 8921), start Thu 4/9 8:48
+    avaarant pctecrg45 ANTIN-LM-DPPM-DRI-M-D (v5.5) (lxlicen18a/1718 19520), start Thu 4/9 9:02
+    dbaffari pcte24352 LAPTE224456 (v5.4) (lxlicen18a/1718 5802), start Wed 4/8 8:52
+    dbaffari pcte24352 LAPTE224456 (v5.4) (lxlicen18a/1718 4016), start Wed 4/8 10:17
+    dbaffari PCTE23615 /dev/pts/1 (v5.4) (lxlicen18a/1718 13646), start Wed 4/8 19:02
+    dvanbuur pcatlasmag07 imac (v5.4) (lxlicen18a/1718 10001), start Fri 4/3 15:36
+    fpeauger workbe16130 CERNTS1610 (v5.4) (lxlicen18a/1718 5132), start Tue 4/7 14:48
+    gtradtl engts02 PCBE15346 (v5.31) (lxlicen18a/1718 2114), start Mon 4/6 19:37
+    gtradtl engts02 PCBE15346 (v5.31) (lxlicen18a/1718 15633), start Mon 4/6 20:03
+    ifalorio pccaz4527 UOS-015776 (v5.31) (lxlicen18a/1718 5302), start Wed 4/8 8:55
+    jfleiter pcte240947 LAPTE219380 (v5.31) (lxlicen18a/1718 303), start Wed 4/8 8:52
+    jfleiter pcte240947 LAPTE219380 (v5.31) (lxlicen18a/1718 6605), start Wed 4/8 8:52
+    lagonzal PCTE216693 CERNTS1622 (v5.5) (lxlicen18a/1718 7736), start Thu 4/9 9:25
+    lbortot pcte24306 LAPTE224448 (v5.5) (lxlicen18a/1718 15268), start Thu 4/9 8:44
+    ligloggl liglogglvm2 LIGLOGGL00 (v5.4) (lxlicen18a/1718 4201), start Fri 4/3 15:35
+    llainama pcte203582 LAPTE24360 (v5.31) (lxlicen18a/1718 3727), start Wed 4/8 18:40
+    mabeguin vm-comsol mabeguin-laptop (v5.5) (lxlicen18a/1718 10106), start Thu 4/9 9:11
+    mabeguin vm-comsol mabeguin-laptop (v5.5) (lxlicen18a/1718 15421), start Thu 4/9 9:11
+    mabeguin vm-comsol mabeguin-laptop (v5.5) (lxlicen18a/1718 10204), start Thu 4/9 9:11
+    mabeguin vm-comsol mabeguin-laptop (v5.5) (lxlicen18a/1718 23114), start Thu 4/9 9:11
+    mabeguin vm-comsol mabeguin-laptop (v5.5) (lxlicen18a/1718 22413), start Thu 4/9 9:11
+    mabeguin vm-comsol mabeguin-laptop (v5.5) (lxlicen18a/1718 8121), start Thu 4/9 9:35
+    mokhalva dtl-pimms2 CERNTS1602 (v5.31) (lxlicen18a/1718 19821), start Thu 4/9 8:12
+    rcaravit aegiswin03 aegiswin03 (v5.4) (lxlicen18a/1718 12901), start Fri 4/3 15:36
+    singhs pcatlashtk05 SHUVAYSINGH (v5.5) (lxlicen18a/1718 9019), start Thu 4/9 8:59
+    singhs pcatlashtk05 SHUVAYSINGH (v5.5) (lxlicen18a/1718 17715), start Thu 4/9 8:59
+    ssorti pccag4030 DESKTOP-MBR4KG0 (v5.4) (lxlicen18a/1718 8308), start Wed 4/8 8:52
+    swarren pcbetadropnmrx PID-TOWER (v5.5) (lxlicen18a/1718 13558), start Thu 4/9 9:31
+    swarren pcbetadropnmrx PID-TOWER (v5.5) (lxlicen18a/1718 2416), start Thu 4/9 9:31
+    swarren pcbetadropnmrx PID-TOWER (v5.5) (lxlicen18a/1718 22706), start Thu 4/9 9:32
+    tjzwijne pcatlasmag08 DESKTOP-HH1HJFH (v5.4) (lxlicen18a/1718 12701), start Fri 4/3 15:36
+    tjzwijne pcatlasmag08 DESKTOP-HH1HJFH (v5.4) (lxlicen18a/1718 12801), start Fri 4/3 15:36
+    tjzwijne pcatlasmag08 DESKTOP-HH1HJFH (v5.4) (lxlicen18a/1718 14516), start Fri 4/3 19:02
+
+  "SERIAL" v5.5, vendor: LMCOMSOL
+  uncounted nodelocked license locked to NOTHING (hostid=ANY)
+
+    tranquil pcbe13402 GTSURFACEBOOK (v5.31) (lxlicen18a/1718 7405), start Wed 4/8 17:14
+
+  "SERIAL" v5.5, vendor: LMCOMSOL
+  uncounted nodelocked license locked to NOTHING (hostid=ANY)
+
+    vgerbet pcte234131 MSI (v5.5) (lxlicen18a/1718 21819), start Thu 4/9 9:35
+    vkorchev pcte216698 macte25311 (v5.3) (lxlicen18a/1718 13741), start Tue 4/7 15:21
+    vkorchev pcte216698 macte25311 (v5.3) (lxlicen18a/1718 16113), start Tue 4/7 16:31
+
+Users of ACDC:  (Total of 14 licenses issued;  Total of 13 licenses in use)
+
+  "ACDC" v5.5, vendor: LMCOMSOL
+  floating license
+
+    Bernardo macte25212 macte25212.home (v5.4) (lxlicen18a/1718 21924), start Thu 4/9 10:12
+    avaarant pctecrg45 ANTIN-LM-DPPM-DRI-M-D (v5.5) (lxlicen18a/1718 19022), start Thu 4/9 9:03
+    dbaffari pcte24352 LAPTE224456 (v5.4) (lxlicen18a/1718 7502), start Wed 4/8 8:52
+    dbaffari PCTE23615 /dev/pts/1 (v5.4) (lxlicen18a/1718 4115), start Wed 4/8 19:03
+    dvanbuur pcatlasmag07 imac (v5.4) (lxlicen18a/1718 11001), start Fri 4/3 15:36
+    gtradtl engts02 PCBE15346 (v5.31) (lxlicen18a/1718 21107), start Mon 4/6 19:42
+    lbortot pcte24306 LAPTE224448 (v5.5) (lxlicen18a/1718 7311), start Thu 4/9 8:44
+    mabeguin vm-comsol mabeguin-laptop (v5.5) (lxlicen18a/1718 2807), start Thu 4/9 9:11
+    rcaravit aegiswin03 aegiswin03 (v5.4) (lxlicen18a/1718 1801), start Fri 4/3 15:35
+    ssorti pccag4030 DESKTOP-MBR4KG0 (v5.4) (lxlicen18a/1718 6705), start Wed 4/8 8:52
+    tjzwijne pcatlasmag08 DESKTOP-HH1HJFH (v5.4) (lxlicen18a/1718 14203), start Fri 4/3 19:02
+    tranquil pcbe13402 GTSURFACEBOOK (v5.31) (lxlicen18a/1718 10405), start Wed 4/8 18:39
+    vkorchev pcte216698 macte25311 (v5.3) (lxlicen18a/1718 20405), start Tue 4/7 15:21
+
+Users of ACDCBATCH:  (Total of 14 licenses issued;  Total of 1 license in use)
+
+  "ACDCBATCH" v5.5, vendor: LMCOMSOL
+  floating license
+
+    avaarant batch48vm04.cern.ch /dev/tty (v5.5) (lxlicen18a/1718 20310), start Wed 4/8 10:46
+
+Users of CADIMPORT:  (Total of 15 licenses issued;  Total of 12 licenses in use)
+
+  "CADIMPORT" v5.5, vendor: LMCOMSOL
+  floating license
+
+    adpowell ALPHACELESTE adams-macbook-a (v5.21) (lxlicen18a/1718 18504), start Sat 4/4 14:53
+    dbaffari pcte24352 LAPTE224456 (v5.4) (lxlicen18a/1718 6941), start Wed 4/8 8:52
+    dbaffari PCTE23615 /dev/pts/1 (v5.4) (lxlicen18a/1718 21220), start Wed 4/8 19:03
+    dvanbuur pcatlasmag07 imac (v5.4) (lxlicen18a/1718 10801), start Fri 4/3 15:36
+    fpeauger workbe16130 CERNTS1627 (v5.4) (lxlicen18a/1718 9325), start Wed 4/8 15:21
+    gtradtl engts02 PCBE15346 (v5.31) (lxlicen18a/1718 21007), start Mon 4/6 19:38
+    ligloggl liglogglvm2 LIGLOGGL00 (v5.4) (lxlicen18a/1718 4501), start Fri 4/3 15:35
+    mabeguin vm-comsol mabeguin-laptop (v5.5) (lxlicen18a/1718 2527), start Thu 4/9 9:11
+    rcaravit aegiswin03 aegiswin03 (v5.4) (lxlicen18a/1718 1401), start Fri 4/3 15:35
+    ssorti pccag4030 DESKTOP-MBR4KG0 (v5.4) (lxlicen18a/1718 6505), start Wed 4/8 8:52
+    tranquil pcbe13402 GTSURFACEBOOK (v5.31) (lxlicen18a/1718 509), start Wed 4/8 17:17
+    vkorchev pcte216698 macte25311 (v5.3) (lxlicen18a/1718 20509), start Tue 4/7 15:21
+
+Users of CADIMPORTBATCH:  (Total of 15 licenses issued;  Total of 0 licenses in use)
+
+Users of CFD:  (Total of 4 licenses issued;  Total of 0 licenses in use)
+
+Users of CFDBATCH:  (Total of 4 licenses issued;  Total of 0 licenses in use)
+
+Users of CHEM:  (Total of 4 licenses issued;  Total of 0 licenses in use)
+
+Users of CHEMBATCH:  (Total of 4 licenses issued;  Total of 0 licenses in use)
+
+Users of COMSOL:  (Total of 28 licenses issued;  Total of 24 licenses in use)
+
+  "COMSOL" v5.5, vendor: LMCOMSOL
+  floating license
+
+    Bernardo macte25212 macte25212.home (v5.4) (lxlicen18a/1718 3909), start Thu 4/9 10:11
+    abaskys pcte25484 algirdass-macbo (v5.5) (lxlicen18a/1718 21603), start Thu 4/9 10:23
+    adpowell ALPHACELESTE adams-macbook-a (v5.21) (lxlicen18a/1718 11504), start Sat 4/4 14:52
+    avaarant pctecrg45 ANTIN-LM-DPPM-DRI-M-D (v5.5) (lxlicen18a/1718 17318), start Thu 4/9 9:02
+    dbaffari pcte24352 LAPTE224456 (v5.4) (lxlicen18a/1718 5602), start Wed 4/8 8:52
+    dbaffari PCTE23615 /dev/pts/1 (v5.4) (lxlicen18a/1718 12303), start Wed 4/8 19:02
+    dvanbuur pcatlasmag07 imac (v5.4) (lxlicen18a/1718 10501), start Fri 4/3 15:36
+    fpeauger workbe16130 CERNTS1610 (v5.4) (lxlicen18a/1718 3420), start Tue 4/7 14:48
+    gtradtl engts02 PCBE15346 (v5.31) (lxlicen18a/1718 17009), start Mon 4/6 19:37
+    ifalorio pccaz4527 UOS-015776 (v5.31) (lxlicen18a/1718 5502), start Wed 4/8 8:55
+    jfleiter pcte240947 LAPTE219380 (v5.31) (lxlicen18a/1718 7102), start Wed 4/8 8:52
+    lagonzal PCTE216693 CERNTS1622 (v5.5) (lxlicen18a/1718 17213), start Thu 4/9 9:25
+    lbortot pcte24306 LAPTE224448 (v5.5) (lxlicen18a/1718 5214), start Thu 4/9 8:44
+    ligloggl liglogglvm2 LIGLOGGL00 (v5.4) (lxlicen18a/1718 4301), start Fri 4/3 15:35
+    llainama pcte203582 LAPTE24360 (v5.31) (lxlicen18a/1718 3321), start Wed 4/8 18:40
+    mabeguin vm-comsol mabeguin-laptop (v5.5) (lxlicen18a/1718 21726), start Thu 4/9 9:11
+    rcaravit aegiswin03 aegiswin03 (v5.4) (lxlicen18a/1718 601), start Fri 4/3 15:35
+    singhs pcatlashtk05 SHUVAYSINGH (v5.5) (lxlicen18a/1718 13073), start Thu 4/9 8:59
+    ssorti pccag4030 DESKTOP-MBR4KG0 (v5.4) (lxlicen18a/1718 14407), start Wed 4/8 8:52
+    swarren pcbetadropnmrx PID-TOWER (v5.5) (lxlicen18a/1718 18815), start Thu 4/9 9:31
+    tjzwijne pcatlasmag08 DESKTOP-HH1HJFH (v5.4) (lxlicen18a/1718 201), start Fri 4/3 15:35
+    tranquil pcbe13402 GTSURFACEBOOK (v5.31) (lxlicen18a/1718 22120), start Wed 4/8 17:14
+    vgerbet pcte234131 MSI (v5.5) (lxlicen18a/1718 3051), start Thu 4/9 9:35
+    vkorchev pcte216698 macte25311 (v5.3) (lxlicen18a/1718 20103), start Tue 4/7 15:21
+
+Users of COMSOLBATCH:  (Total of 28 licenses issued;  Total of 1 license in use)
+
+  "COMSOLBATCH" v5.5, vendor: LMCOMSOL
+  floating license
+
+    avaarant batch48vm04.cern.ch /dev/tty (v5.5) (lxlicen18a/1718 23208), start Wed 4/8 10:46
+
+Users of DESIGN:  (Total of 2 licenses issued;  Total of 2 licenses in use)
+
+  "DESIGN" v5.5, vendor: LMCOMSOL
+  floating license
+
+    mabeguin vm-comsol mabeguin-laptop (v5.5) (lxlicen18a/1718 2708), start Thu 4/9 9:11
+    singhs pcatlashtk05 SHUVAYSINGH (v5.5) (lxlicen18a/1718 15541), start Thu 4/9 8:59
+
+Users of DESIGNBATCH:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of ECADIMPORT:  (Total of 9 licenses issued;  Total of 0 licenses in use)
+
+Users of ECADIMPORTBATCH:  (Total of 9 licenses issued;  Total of 0 licenses in use)
+
+Users of ELECTRODEPOSITION:  (Total of 4 licenses issued;  Total of 1 license in use)
+
+  "ELECTRODEPOSITION" v5.5, vendor: LMCOMSOL
+  floating license
+
+    llainama pcte203582 LAPTE24360 (v5.31) (lxlicen18a/1718 19713), start Wed 4/8 18:40
+
+Users of ELECTRODEPOSITIONBATCH:  (Total of 4 licenses issued;  Total of 0 licenses in use)
+
+Users of HEATTRANSFER:  (Total of 12 licenses issued;  Total of 2 licenses in use)
+
+  "HEATTRANSFER" v5.5, vendor: LMCOMSOL
+  floating license
+
+    adpowell ALPHACELESTE adams-macbook-a (v5.21) (lxlicen18a/1718 11904), start Sat 4/4 14:53
+    tjzwijne pcatlasmag08 DESKTOP-HH1HJFH (v5.4) (lxlicen18a/1718 1301), start Fri 4/3 15:35
+
+Users of HEATTRANSFERBATCH:  (Total of 12 licenses issued;  Total of 0 licenses in use)
+
+Users of LLEXCEL:  (Total of 14 licenses issued;  Total of 0 licenses in use)
+
+Users of LLEXCELBATCH:  (Total of 14 licenses issued;  Total of 0 licenses in use)
+
+Users of LLINVENTOR:  (Total of 5 licenses issued;  Total of 0 licenses in use)
+
+Users of LLMATLAB:  (Total of 3 licenses issued;  Total of 0 licenses in use)
+
+Users of LLMATLABBATCH:  (Total of 3 licenses issued;  Total of 0 licenses in use)
+
+Users of MATLIB:  (Total of 6 licenses issued;  Total of 6 licenses in use)
+
+  "MATLIB" v5.5, vendor: LMCOMSOL
+  floating license
+
+    dvanbuur pcatlasmag07 imac (v5.4) (lxlicen18a/1718 11201), start Fri 4/3 15:36
+    gtradtl engts02 PCBE15346 (v5.31) (lxlicen18a/1718 7610), start Mon 4/6 19:39
+    singhs pcatlashtk05 SHUVAYSINGH (v5.5) (lxlicen18a/1718 13118), start Thu 4/9 8:59
+    ssorti pccag4030 DESKTOP-MBR4KG0 (v5.4) (lxlicen18a/1718 5902), start Wed 4/8 8:52
+    tjzwijne pcatlasmag08 DESKTOP-HH1HJFH (v5.4) (lxlicen18a/1718 1201), start Fri 4/3 15:35
+    tranquil pcbe13402 GTSURFACEBOOK (v5.31) (lxlicen18a/1718 19609), start Wed 4/8 18:35
+
+Users of MATLIBBATCH:  (Total of 6 licenses issued;  Total of 0 licenses in use)
+
+Users of MOLECULARFLOW:  (Total of 3 licenses issued;  Total of 1 license in use)
+
+  "MOLECULARFLOW" v5.5, vendor: LMCOMSOL
+  floating license
+
+    swarren pcbetadropnmrx PID-TOWER (v5.5) (lxlicen18a/1718 3642), start Thu 4/9 9:31
+
+Users of MOLECULARFLOWBATCH:  (Total of 3 licenses issued;  Total of 0 licenses in use)
+
+Users of MULTIBODYDYNAMICS:  (Total of 5 licenses issued;  Total of 0 licenses in use)
+
+Users of MULTIBODYDYNAMICSBATCH:  (Total of 5 licenses issued;  Total of 0 licenses in use)
+
+Users of NONLINEARSTRUCTMATERIALS:  (Total of 5 licenses issued;  Total of 1 license in use)
+
+  "NONLINEARSTRUCTMATERIALS" v5.5, vendor: LMCOMSOL
+  floating license
+
+    abaskys pcte25484 algirdass-macbo (v5.5) (lxlicen18a/1718 12603), start Thu 4/9 10:23
+
+Users of NONLINEARSTRUCTMATERIALSBATCH:  (Total of 5 licenses issued;  Total of 0 licenses in use)
+
+Users of OPTIMIZATION:  (Total of 1 license issued;  Total of 0 licenses in use)
+
+Users of OPTIMIZATIONBATCH:  (Total of 1 license issued;  Total of 0 licenses in use)
+
+Users of PARTICLETRACING:  (Total of 9 licenses issued;  Total of 2 licenses in use)
+
+  "PARTICLETRACING" v5.5, vendor: LMCOMSOL
+  floating license
+
+    rcaravit aegiswin03 aegiswin03 (v5.4) (lxlicen18a/1718 2001), start Fri 4/3 15:35
+    tranquil pcbe13402 GTSURFACEBOOK (v5.31) (lxlicen18a/1718 9529), start Wed 4/8 17:26
+
+Users of PARTICLETRACINGBATCH:  (Total of 9 licenses issued;  Total of 0 licenses in use)
+
+Users of PIPEFLOW:  (Total of 1 license issued;  Total of 0 licenses in use)
+
+Users of PIPEFLOWBATCH:  (Total of 1 license issued;  Total of 0 licenses in use)
+
+Users of PLASMA:  (Total of 6 licenses issued;  Total of 0 licenses in use)
+
+Users of PLASMABATCH:  (Total of 6 licenses issued;  Total of 0 licenses in use)
+
+Users of RAYOPTICS:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of RAYOPTICSBATCH:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of RF:  (Total of 2 licenses issued;  Total of 2 licenses in use)
+
+  "RF" v5.5, vendor: LMCOMSOL
+  floating license
+
+    fpeauger workbe16130 CERNTS1627 (v5.4) (lxlicen18a/1718 20004), start Wed 4/8 14:44
+    mabeguin vm-comsol mabeguin-laptop (v5.5) (lxlicen18a/1718 18708), start Thu 4/9 9:11
+
+Users of RFBATCH:  (Total of 2 licenses issued;  Total of 0 licenses in use)
+
+Users of STRUCTURALMECHANICS:  (Total of 5 licenses issued;  Total of 4 licenses in use)
+
+  "STRUCTURALMECHANICS" v5.5, vendor: LMCOMSOL
+  floating license
+
+    abaskys pcte25484 algirdass-macbo (v5.5) (lxlicen18a/1718 103), start Thu 4/9 10:23
+    fpeauger workbe16130 CERNTS1627 (v5.4) (lxlicen18a/1718 18362), start Wed 4/8 15:54
+    gtradtl engts02 PCBE15346 (v5.31) (lxlicen18a/1718 20915), start Mon 4/6 19:37
+    vgerbet pcte234131 MSI (v5.5) (lxlicen18a/1718 20717), start Thu 4/9 9:35
+
+Users of STRUCTURALMECHANICSBATCH:  (Total of 5 licenses issued;  Total of 0 licenses in use)
+
+Users of WAVEOPTICS:  (Total of 1 license issued;  Total of 0 licenses in use)
+
+Users of WAVEOPTICSBATCH:  (Total of 1 license issued;  Total of 0 licenses in use)
+
+Users of COMSOLGUI:  (Total of 28 licenses issued;  Total of 24 licenses in use)
+
+  "COMSOLGUI" v5.5, vendor: LMCOMSOL
+  floating license
+
+    Bernardo macte25212 macte25212.home (v5.4) (lxlicen18a/1718 9141), start Thu 4/9 10:11
+    abaskys pcte25484 algirdass-macbo (v5.5) (lxlicen18a/1718 17925), start Thu 4/9 10:23
+    adpowell ALPHACELESTE adams-macbook-a (v5.21) (lxlicen18a/1718 11408), start Sat 4/4 14:52
+    avaarant pctecrg45 ANTIN-LM-DPPM-DRI-M-D (v5.5) (lxlicen18a/1718 6816), start Thu 4/9 9:02
+    dbaffari pcte24352 LAPTE224456 (v5.4) (lxlicen18a/1718 14923), start Wed 4/8 8:52
+    dbaffari PCTE23615 /dev/pts/1 (v5.4) (lxlicen18a/1718 18644), start Wed 4/8 19:02
+    dvanbuur pcatlasmag07 imac (v5.4) (lxlicen18a/1718 10701), start Fri 4/3 15:36
+    fpeauger workbe16130 CERNTS1610 (v5.4) (lxlicen18a/1718 712), start Tue 4/7 14:48
+    gtradtl engts02 PCBE15346 (v5.31) (lxlicen18a/1718 2606), start Mon 4/6 19:37
+    ifalorio pccaz4527 UOS-015776 (v5.31) (lxlicen18a/1718 5402), start Wed 4/8 8:55
+    jfleiter pcte240947 LAPTE219380 (v5.31) (lxlicen18a/1718 6302), start Wed 4/8 8:52
+    lagonzal PCTE216693 CERNTS1622 (v5.5) (lxlicen18a/1718 13850), start Thu 4/9 9:25
+    lbortot pcte24306 LAPTE224448 (v5.5) (lxlicen18a/1718 8520), start Thu 4/9 8:44
+    ligloggl liglogglvm2 LIGLOGGL00 (v5.4) (lxlicen18a/1718 4401), start Fri 4/3 15:35
+    llainama pcte203582 LAPTE24360 (v5.31) (lxlicen18a/1718 21509), start Wed 4/8 18:40
+    mabeguin vm-comsol mabeguin-laptop (v5.5) (lxlicen18a/1718 16548), start Thu 4/9 9:11
+    rcaravit aegiswin03 aegiswin03 (v5.4) (lxlicen18a/1718 1001), start Fri 4/3 15:35
+    singhs pcatlashtk05 SHUVAYSINGH (v5.5) (lxlicen18a/1718 14733), start Thu 4/9 8:59
+    ssorti pccag4030 DESKTOP-MBR4KG0 (v5.4) (lxlicen18a/1718 14112), start Wed 4/8 8:52
+    swarren pcbetadropnmrx PID-TOWER (v5.5) (lxlicen18a/1718 15116), start Thu 4/9 9:31
+    tjzwijne pcatlasmag08 DESKTOP-HH1HJFH (v5.4) (lxlicen18a/1718 801), start Fri 4/3 15:35
+    tranquil pcbe13402 GTSURFACEBOOK (v5.31) (lxlicen18a/1718 19312), start Wed 4/8 17:14
+    vgerbet pcte234131 MSI (v5.5) (lxlicen18a/1718 11117), start Thu 4/9 9:35
+    vkorchev pcte216698 macte25311 (v5.3) (lxlicen18a/1718 20203), start Tue 4/7 15:21
+
+Users of CLIENTSERVER:  (Total of 28 licenses issued;  Total of 0 licenses in use)
+
+Users of CLUSTERNODE:  (Total of 28 licenses issued;  Total of 1 license in use)
+
+  "CLUSTERNODE" v5.5, vendor: LMCOMSOL
+  floating license
+
+    avaarant batch48vm04.cern.ch /dev/tty (v5.5) (lxlicen18a/1718 22908), start Wed 4/8 10:46
+
+Users of COMSOLUSER:  (Total of 28 licenses issued;  Total of 16 licenses in use)
+
+  "COMSOLUSER" v5.5, vendor: LMCOMSOL
+  floating license
+
+    Bernardo macte25212 macte25212.home (v5.4) (lxlicen18a/1718 8013), start Thu 4/9 10:11
+    abaskys pcte25484 algirdass-macbo (v5.5) (lxlicen18a/1718 8724), start Thu 4/9 10:23
+    avaarant batch48vm04.cern.ch /dev/tty (v5.5) (lxlicen18a/1718 8827), start Wed 4/8 10:46
+    dbaffari pcte24352 LAPTE224456 (v5.4) (lxlicen18a/1718 7202), start Wed 4/8 8:52
+    dvanbuur pcatlasmag07 imac (v5.4) (lxlicen18a/1718 11301), start Fri 4/3 15:36
+    fpeauger workbe16130 CERNTS1610 (v5.4) (lxlicen18a/1718 13313), start Tue 4/7 14:48
+    lagonzal PCTE216693 CERNTS1622 (v5.5) (lxlicen18a/1718 17517), start Thu 4/9 9:25
+    lbortot pcte24306 LAPTE224448 (v5.5) (lxlicen18a/1718 14816), start Thu 4/9 8:44
+    ligloggl liglogglvm2 LIGLOGGL00 (v5.4) (lxlicen18a/1718 4601), start Fri 4/3 15:35
+    mabeguin vm-comsol mabeguin-laptop (v5.5) (lxlicen18a/1718 16627), start Thu 4/9 9:11
+    rcaravit aegiswin03 aegiswin03 (v5.4) (lxlicen18a/1718 2201), start Fri 4/3 15:35
+    singhs pcatlashtk05 SHUVAYSINGH (v5.5) (lxlicen18a/1718 3527), start Thu 4/9 8:59
+    ssorti pccag4030 DESKTOP-MBR4KG0 (v5.4) (lxlicen18a/1718 6002), start Wed 4/8 8:52
+    swarren pcbetadropnmrx PID-TOWER (v5.5) (lxlicen18a/1718 22812), start Thu 4/9 9:31
+    tjzwijne pcatlasmag08 DESKTOP-HH1HJFH (v5.4) (lxlicen18a/1718 1601), start Fri 4/3 15:35
+    vgerbet pcte234131 MSI (v5.5) (lxlicen18a/1718 16738), start Thu 4/9 9:35
+
+Users of CADREADER:  (Total of 15 licenses issued;  Total of 0 licenses in use)
+
+Users of CADREADERBATCH:  (Total of 15 licenses issued;  Total of 0 licenses in use)
+
+Users of visualhdlpro_c:  (Error: 5 licenses, unsupported by licensed server)

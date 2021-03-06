@@ -4,27 +4,24 @@ SECRET_KEY = None
 # Time before the token expires.
 TOKEN_LIFETIME = 8*3600
 
-# The Flask-Multipass auth provider settings. Currently only one provider is supported,
-# and it has to be a 'remote' (redirect to an SSO page) one.
+# OAuth configuration
 # The default here should work with any OIDC-compatible system and only requires you to
 # provide the metadata url and client id+secret.
-MULTIPASS_AUTH_PROVIDER_LOGIN = {
-    'type': 'authlib',
-    'authlib_args': {
-        'server_metadata_url': 'https://.../.well-known/openid-configuration',
-        'client_id': '',
-        'client_secret': '',
-        'client_kwargs': {'scope': 'openid'}
-    }
+OAUTH = {
+    'server_metadata_url': 'https://auth.cern.ch/auth/realms/cern/.well-known/openid-configuration',
+    'client_id': '',
+    'client_secret': '',
+    'client_kwargs': {'scope': 'openid'}
 }
 
-# The Flask-Multipass identity provider settings. Currently only one provider is supported
-# and it needs to provide the following data keys: email, given_name, family_name, name
-MULTIPASS_IDENTITY_PROVIDER_LOGIN = {'type': 'authlib'}
-
-# The Flask-Multipass identity provider settings used to search for existing people.
-# This may be the same as `MULTIPASS_IDENTITY_PROVIDER`.
-MULTIPASS_IDENTITY_PROVIDER_SEARCH = None
+# Mapping of the application field to those of the OAuth provider
+OAUTH_MAPPING = {
+    'username': '',
+    'email': '',
+    'name': '',
+    'roles': '',
+    'uid': ''
+}
 
 # Whether to completely skip the login process and use a dummy user.
 # This is obviously a very bad idea in production, but may be useful
@@ -71,4 +68,6 @@ NOREPLY_ADDRESS = 'noreply@example.com'
 ANONYMOUS_EMAILS = True
 
 # Specify how often users can send emails to license holders
-EMAIL_COOLDOWN = 0
+# Format: [count] [per|/] [n (optional)] [second|minute|hour|day|month|year]
+# https://flask-limiter.readthedocs.io/en/2.x/configuration.html#rate-limit-string-notation
+EMAIL_COOLDOWN = '1/hour'
