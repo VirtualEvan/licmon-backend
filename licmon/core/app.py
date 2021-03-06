@@ -27,7 +27,7 @@ def _configure_auth(app):
 
 
 def create_app(use_env_config=True):
-    app = Flask('Licmon')
+    app = Flask('licmon')
     limiter.init_app(app)
     # TODO: Check this object/static configuration
     # app.config.from_object(config_by_name[config_name])

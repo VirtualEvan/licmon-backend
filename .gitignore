@@ -1,6 +1,17 @@
-.vscode/
-__pycache__/
+# Licmon
 flex/
-.DS_Store
 licmon.cfg
 servers.cfg
+
+# Editors/OS
+.vscode/
+.DS_Store
+
+# Python
+.venv/
+dist/
+build/
+__pycache__/
+*.py[co]
+*.egg-info
+*.whl

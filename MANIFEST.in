@@ -1,0 +1,4 @@
+include licmon/licmon.cfg.example
+include licmon/servers.cfg.example
+graft licmon/templates
+global-exclude *.py[co] __pycache__ .keep
