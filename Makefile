@@ -46,8 +46,7 @@ flask-server:
 .PHONY: build
 build:
 	@printf "  \033[38;5;154mBUILD\033[0m  \033[38;5;176mBuilding production package\033[0m\n"
-	# @rm -rf newdle/client/build build
-	# @source ${VENV}/bin/activate && cd newdle/client && npm run build
+	@rm -rf build
 	@source ${VENV}/bin/activate
 	@${PIP} list
 	@python setup.py bdist_wheel -q
